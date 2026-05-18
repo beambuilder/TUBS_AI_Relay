@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      APP_HOST: tubs-ai-relay_server_1
+      APP_PORT: 8000
+
+  server:
+    image: ghcr.io/niclasprzibylla/tubs-ai-relay:0.1.0
+    restart: on-failure
+    stop_grace_period: 1m
+    init: true
+    environment:
+      # Your personal TU Braunschweig KI-Toolbox API token.
+      # Either set it here, or place it in a file at
+      # ${APP_DATA_DIR}/data/tubs_api_key (preferred for secrets).
+      TUBS_API_KEY: ${TUBS_API_KEY:-}
+      # Default model used when a client does not specify one.
+      TUBS_DEFAULT_MODEL: ${TUBS_DEFAULT_MODEL:-gpt-4o-mini}
+      # Optional shared secret. If set, callers (including Hermes / OpenClaw)
+      # must send "Authorization: Bearer <RELAY_API_KEY>".
+      # Leave empty for an open relay inside the Umbrel network.
+      RELAY_API_KEY: ${RELAY_API_KEY:-}
+      # Path inside the container where the API key file is read from
+      # if TUBS_API_KEY env var is empty.
+      TUBS_API_KEY_FILE: /data/tubs_api_key
+    volumes:
+      - ${APP_DATA_DIR}/data:/data:ro
+    expose:
+      - "8000"

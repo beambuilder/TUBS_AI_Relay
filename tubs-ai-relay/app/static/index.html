@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TUBS AI Relay</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <div id="sidebar-header">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          <span class="brand-name">TUBS AI Relay</span>
+        </div>
+        <button id="new-chat-btn" class="primary">＋ New chat</button>
+      </div>
+      <ul id="chat-list" aria-label="Saved chats"></ul>
+      <div id="sidebar-footer">
+        <label class="select-label">
+          <span>Model</span>
+          <select id="model-select"></select>
+        </label>
+        <div id="status" class="status"></div>
+      </div>
+    </aside>
+    <main id="main">
+      <header id="topbar">
+        <div>
+          <div id="chat-title">No chat selected</div>
+          <div id="chat-sub" class="sub"></div>
+        </div>
+        <div class="spacer"></div>
+        <button id="rename-btn" class="ghost" title="Rename chat">Rename</button>
+        <button id="delete-btn" class="ghost danger" title="Delete chat">Delete</button>
+      </header>
+      <div id="messages" aria-live="polite"></div>
+      <form id="composer">
+        <textarea
+          id="input"
+          rows="2"
+          placeholder="Type a message and press Enter (Shift+Enter for a new line)"
+          autocomplete="off"
+        ></textarea>
+        <button id="send-btn" type="submit" class="primary">Send</button>
+      </form>
+    </main>
+  </div>
+  <template id="message-template">
+    <div class="msg">
+      <div class="avatar"></div>
+      <div class="bubble"></div>
+    </div>
+  </template>
+  <script src="/static/app.js"></script>
+</body>
+</html>

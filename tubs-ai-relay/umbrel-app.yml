@@ -1,0 +1,42 @@
+manifestVersion: 1
+id: tubs-ai-relay
+name: TUBS AI Relay
+tagline: OpenAI-compatible proxy for the TU Braunschweig KI-Toolbox
+icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps/master/getumbrel-umbrel/icon.svg
+category: Developer Tools
+version: "0.1.0"
+port: 4040
+description: >-
+  TUBS AI Relay exposes the TU Braunschweig KI-Toolbox API as an
+  OpenAI-compatible endpoint and gives you a simple chat UI to test it.
+
+
+  Use it to drive other Umbrel apps (e.g. Hermes / OpenClaw) that expect an
+  OpenAI-compatible LLM backend, while keeping your AI traffic on the
+  university's "KI-Toolbox" service. Supports cloud models (GPT-4o, GPT-5,
+  ...) and on-premise models (Qwen3, GPT-OSS-120B, Mistral, Phi-4, ...).
+
+
+  After install: open the app, pick a model and start a chat to verify your
+  TUBS API token works. Other Umbrel containers can reach the OpenAI API at
+  http://tubs-ai-relay_server_1:8000/v1
+
+
+  Requires a personal API token from https://ki-toolbox.tu-braunschweig.de
+developer: Niclas Przibylla
+website: https://ki-toolbox.tu-braunschweig.de
+submitter: Niclas Przibylla
+submission: https://github.com/niclasprzibylla/TUBS_AI_Relay
+repo: https://github.com/niclasprzibylla/TUBS_AI_Relay
+support: https://github.com/niclasprzibylla/TUBS_AI_Relay/issues
+gallery:
+  - https://raw.githubusercontent.com/niclasprzibylla/TUBS_AI_Relay/master/docs/gallery-1.png
+  - https://raw.githubusercontent.com/niclasprzibylla/TUBS_AI_Relay/master/docs/gallery-2.png
+  - https://raw.githubusercontent.com/niclasprzibylla/TUBS_AI_Relay/master/docs/gallery-3.png
+releaseNotes: >-
+  Initial release. OpenAI-compatible /v1/chat/completions + /v1/models,
+  streaming, and a built-in chat UI for testing.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

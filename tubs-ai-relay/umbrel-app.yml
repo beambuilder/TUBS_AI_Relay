@@ -2,8 +2,8 @@ manifestVersion: 1
 id: tubs-ai-relay
 name: TUBS AI Relay
 tagline: OpenAI-compatible proxy for the TU Braunschweig KI-Toolbox
-icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps/master/getumbrel-umbrel/icon.svg
-category: Developer Tools
+icon: https://raw.githubusercontent.com/beambuilder/TUBS_AI_Relay/master/icon.svg
+category: ai
 version: "0.1.0"
 port: 4040
 description: >-
@@ -23,16 +23,14 @@ description: >-
 
 
   Requires a personal API token from https://ki-toolbox.tu-braunschweig.de
-developer: Niclas Przibylla
-website: https://ki-toolbox.tu-braunschweig.de
-submitter: Niclas Przibylla
-submission: https://github.com/niclasprzibylla/TUBS_AI_Relay
-repo: https://github.com/niclasprzibylla/TUBS_AI_Relay
-support: https://github.com/niclasprzibylla/TUBS_AI_Relay/issues
+developer: beambuilder
+website: https://github.com/beambuilder/TUBS_AI_Relay
+submitter: beambuilder
+submission: https://github.com/beambuilder/TUBS_AI_Relay
+repo: https://github.com/beambuilder/TUBS_AI_Relay
+support: https://github.com/beambuilder/TUBS_AI_Relay/issues
 gallery:
-  - https://raw.githubusercontent.com/niclasprzibylla/TUBS_AI_Relay/master/docs/gallery-1.png
-  - https://raw.githubusercontent.com/niclasprzibylla/TUBS_AI_Relay/master/docs/gallery-2.png
-  - https://raw.githubusercontent.com/niclasprzibylla/TUBS_AI_Relay/master/docs/gallery-3.png
+  - https://i.imgur.com/yyVG0Jb.jpeg
 releaseNotes: >-
   Initial release. OpenAI-compatible /v1/chat/completions + /v1/models,
   streaming, and a built-in chat UI for testing.
